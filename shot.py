@@ -5,11 +5,11 @@ from constants import *
 
 class Shot(CircleShape):
     def __init__(self, x, y, velocity):
+        pygame.sprite.Sprite.__init__(self)
         radius = SHOT_RADIUS
-
         super().__init__(x, y, radius)
         self.velocity = velocity
-        pygame.sprite.Sprite.__init__(self)
+        
         self.image = pygame.Surface((radius * 2, radius * 2), pygame.SRCALPHA)
         self.rect = self.image.get_rect()
 

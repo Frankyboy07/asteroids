@@ -6,8 +6,9 @@ from shot import Shot
 
 class Player(CircleShape):
     def __init__(self, x, y):
-        super().__init__(x, y, PLAYER_RADIUS)
         pygame.sprite.Sprite.__init__(self)
+        super().__init__(x, y, PLAYER_RADIUS)
+        
         self.rotation = 0
         self.timer = 0
 
